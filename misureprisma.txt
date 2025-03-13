@@ -20,6 +20,12 @@ errore : 71 - 75 9
 rosso: 73 45
 errore: 72 45 -74 30
 
+lunghezze d'onda:
+verde 520-565, 542.5
+arancione 590-625, 607.5
+blu 435-500, 467.5
+viola 400-420, 410
+rosso 625-740, 682.5
 
 
 
