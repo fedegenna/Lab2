@@ -1,0 +1,6 @@
+zero: 203 08
+
+angolo doppietto del sodio
+arancio: 159 10, 248 16
+gallo: 161, 246 10
+verde/azzuro: 167 05, 239 45
