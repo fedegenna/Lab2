@@ -7,3 +7,13 @@ arancio : 154 30, 154 30, 154 30
 indaco (meno intenso) : 153 30 153 30, 153 30
 blu: 152 30, 152 15, 152 30
 viola: 151 35, 151 33, 151 30
+
+misure 2
+(le misure tra parentesi sono prese con un altro metodo, lo stesso delle misure 1)
+Angolo zero = 199 30
+blu : (151) 157 13 
+viola : (159,  156 30) 156 30
+azzurro : 158 30
+verde : 159
+arancione : 159 30
+
