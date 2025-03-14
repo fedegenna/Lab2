@@ -1,1 +1,8 @@
+zero:
 
+angoli:
+rosso acceso (vicino agli altri rossi): 155 10
+giallo: 154 30
+verde: 154
+azzurro 153 30
+viola: 153 03
