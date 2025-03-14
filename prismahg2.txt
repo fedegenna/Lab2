@@ -2,7 +2,7 @@ zero:
 203 15, 
 
 Angolo di minima deviazione: (gradi primi)
-verde : 145, 145, 148 35
+verde : 150 30, 150 30
 arancio : 154 30, 154 30, 154 30
 indaco (meno intenso) : 153 30 153 30, 153 30
 blu: 152 30, 152 15, 152 30
