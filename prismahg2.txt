@@ -1,5 +1,5 @@
 zero:
-205 16
+203 15, 
 
 Angolo di minima deviazione: (gradi primi)
 verde : 145, 145, 148 35
