@@ -1,6 +1,25 @@
-zero: 203 08
 
+
+1200 fenditure
+zero: 203 08
 angolo doppietto del sodio
 arancio: 159 10, 248 16
 gallo: 161, 246 10
 verde/azzuro: 167 05, 239 45
+
+600
+zero: 202
+arancio (doppietto): 181 30, 223 10
+rosso: 180 30, 224
+verde: 182 30, 222 20
+
+300
+zero: 202 10
+arancio primo ordine (vedo una linea sola, non doppietto): 192
+arancio secondo ordine : 181 10
+giallo primo ordine : 192 10
+giallo secondo ordine : 182
+azzurro primo ordine : 193 30
+azzurro secondo ordine : 184 30
+rosso primo ordine : 191 30
+rosso secondo ordine : 180 10
