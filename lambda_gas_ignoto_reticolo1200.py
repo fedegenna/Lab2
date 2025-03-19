@@ -2,17 +2,12 @@ import numpy as np
 import math
 from stats import stats
 
-def lunghezza (n, passo, theta):
-    return passo * np.sin(theta)/n
+def passo (n, l, theta):
+    return (n * l)/ np.sin(theta)
 
-def errore_lunghezza (n, passo, theta, d_passo, d_theta):
-    return np.sqrt((np.sin(theta)/n * d_passo)**2 + (passo * np.cos(theta) / n * d_theta)**2)
+def errore_passo (n, l, theta, d_lambda, d_theta):
+    return np.sqrt((n/np.sin(theta) * d_lambda)**2 + (n * l * np.cos(theta) / np.sin(theta)**2 * d_theta)**2)
            
-''''def passo_medio (n, lambda, theta):
-    return np.mean(passo(n, lambda, theta))
-    
-def errore_passo_medio (n, lambda, theta, d_lambda, d_theta):
-    return np.sqrt(np.sum(errore_passo(n, lambda, theta, d_lambda, d_theta)**2))/len(n)'''
 
 def angoli_rad (gradi, primi):
     """
@@ -34,34 +29,26 @@ def compatibilita (x, y, dx, dy):
 
 def main ():
     n = 1
-    passi = [8.41 * 10**(-7) , 8.77 * 10**(-7), 8.70 * 10**(-7) ]
-    passi_stats = stats(passi)
-    passo = passi_stats.mean()
-    d_passo = passi_stats.sigma_mean()
-
-    theta_v = 0.5 * (angoli_rad(243-163, 30-10))
-    theta_g = 0.5 * (angoli_rad(247-159, 45-30))
-    theta_r = 0.5 * (angoli_rad(253-154, 30-7))
-    theta_a = 0.5 * (angoli_rad(248-158, 45-20))
-
-    lunghezza_v = lunghezza(n, passo, theta_v)
-    lunghezza_a = lunghezza(n, passo, theta_a)
-    lunghezza_r= lunghezza(n, passo, theta_r)
-    lunghezza_g = lunghezza(n, passo, theta_g)
+    lambdas_doppietto = [5.89 * 10**(-7) , 5.896 * 10**(-7)]
+    lambda_doppietto_stats = stats(lambdas_doppietto)
+    lambda_doppietto = lambda_doppietto_stats.mean()
+    d_lambda = lambda_doppietto_stats.sigma_mean()
     
-    d_lunghezza_v = errore_lunghezza(n, passo, theta_v, d_passo, 0.5 * angoli_rad(1, 0))
-    d_lunghezza_a = errore_lunghezza(n, passo, theta_a, d_passo, 0.5 * angoli_rad(1, 0))
-    d_lunghezza_r = errore_lunghezza(n, passo, theta_r, d_passo, 0.5 * angoli_rad(1, 0))
-    d_lunghezza_g = errore_lunghezza(n, passo, theta_g, d_passo, 0.5 * angoli_rad(1, 0))
+    theta_1 = 0.5 * (angoli_rad(248-159, 16-10))
+    theta_2 = 0.5 * (angoli_rad(248-159, 18-6))
+    theta_3 = 0.5 * (angoli_rad(248-159, 14-11))
+    
+    thetas = [theta_1, theta_2, theta_3]
+    theta_stats = stats(thetas)
+    theta = theta_stats.mean()
+    d_theta = theta_stats.sigma_mean()
 
-    print ("Lunghezza verde: ", lunghezza_v, "m")
-    print ("Errore lunghezza verde: ", d_lunghezza_v, "m")
-    print ("Lunghezza arancione: ", lunghezza_a, "m")
-    print ("Errore lunghezza arancione: ", d_lunghezza_a, "m")
-    print ("Lunghezza rossa: ", lunghezza_r, "m")
-    print ("Errore lunghezza rossa: ", d_lunghezza_r, "m")
-    print ("Lunghezza giallo: ", lunghezza_g, "m")
-    print ("Errore lunghezza giallo: ", d_lunghezza_g, "m")
+    passo_doppietto = passo(n, lambda_doppietto, theta)
+    d_passo_doppietto = errore_passo(n, lambda_doppietto, theta, d_lambda, d_theta)
+    
+    
+    print ("Passo del reticolo da 1200: ", passo_doppietto, "m")
+    print ("Errore passo: ", d_passo_doppietto, "m")
     
 if __name__ == "__main__":
     main()
