@@ -12,3 +12,7 @@ risultato passo ottenuto con doppietto del sodio per reticolo da 1200:
 
 Passo del reticolo da 1200:  8.398953064955466e-07 m
 Errore passo:  5.390244084675998e-10 m
+
+risultato passo ottenuto con doppietto del sodio per reticolo da 600:
+
+risultato passo ottenuto con doppietto del sodio per reticolo da 300:
