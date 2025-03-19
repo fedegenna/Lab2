@@ -1,8 +1,9 @@
 zero:
 202 40 
 angoli:
-rosso acceso (vicino agli altri rossi): 155 10
-giallo: 154 30
-verde: 154
-azzurro 153 30
-viola: 153 03
+rosso acceso (vicino agli altri rossi): 155 10, 155 07, 155 09
+giallo: 154 30, 154 32, 154 30
+verde: 154, 154 02 153 59
+azzurro 153 30, 153 36, 153 29
+viola: 153 03, 153 01, 153 02
+

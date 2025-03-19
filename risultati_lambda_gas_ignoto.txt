@@ -11,22 +11,17 @@ Errore lunghezza rossa:  4.875335649978479e-10 m
 
 COMPATIBILE CON L'ELIO
 
-confronto elio e neon:
-Elio (He)
+Neon (Ne) - Lunghezze d'onda tabulate
+Giallo: 585.2 nm
+Arancione: 603.0 nm
+Rosso: 640.2 nm
+Verde: 540.1 nm (debole)
 
-Giallo (587.6 nm) → Molto vicino al valore misurato.
-Arancione (605 nm, meno intenso) → Il tuo valore di 596.5 nm è vicino.
-Rosso (667.8 nm e 706.5 nm) → Il tuo valore di 640.9 nm è un po' distante, ma potrebbe rientrare negli errori di misura.
-Verde (501.6 nm) → Il tuo valore di 541.8 nm è un po' più alto, ma alcuni strumenti potrebbero registrarlo con un piccolo scostamento.
+Elio (He) - Lunghezze d'onda tabulate
+Giallo: 587.6 nm (una delle righe più intense)
+Arancione: 605.0 nm
+Rosso: 667.8 nm,
+Verde: 501.6 nm (meno intensa)
 
-Neon (Ne)
-
-Rosso (~640-650 nm) → Il valore misurato di 640.9 nm è compatibile con alcune righe del neon.
-Arancione (585.2 nm - 603 nm) → Il valore giallo-arancione rientra nelle righe spettrali del neon.
-Verde (540-550 nm, molto debole) → Il tuo valore di 541.8 nm potrebbe corrispondere a una riga secondaria del neon.
-
-compatibilità gas e elio:
-Compatibilità verde:  103.00000000000006
-Compatibilità arancione:  10.625000000000004
-Compatibilità rosso:  53.80000000000002
-Compatibilità giallo:  4.999999999999952
+RMSE Elio:  2.49977498987409e-08
+RMSE Neon:  3.5369478367655242e-09

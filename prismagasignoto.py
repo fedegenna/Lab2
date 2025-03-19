@@ -34,7 +34,7 @@ def main():
     theta_iniz_err = sessagesimale_to_decimale(0,1)
     alpha = sessagesimale_to_decimale(59, 30)
     alpha_err = sessagesimale_to_decimale(0,1)
-    A = 1.6093
+    A = 1.5093
     
     err_A = 0.0329
     
