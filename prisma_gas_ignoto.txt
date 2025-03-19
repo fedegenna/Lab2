@@ -1,5 +1,5 @@
 zero:
-
+202 40 
 angoli:
 rosso acceso (vicino agli altri rossi): 155 10
 giallo: 154 30
