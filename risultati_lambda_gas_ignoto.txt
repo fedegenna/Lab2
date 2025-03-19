@@ -14,13 +14,13 @@ COMPATIBILE CON L'ELIO
 Neon (Ne) - Lunghezze d'onda tabulate
 Giallo: 585.2 nm
 Arancione: 603.0 nm
-Rosso: 640.2 nm, 650.6 nm, 667.8 nm, 692.9 nm
+Rosso: 640.2 nm
 Verde: 540.1 nm (debole)
 
 Elio (He) - Lunghezze d'onda tabulate
 Giallo: 587.6 nm (una delle righe più intense)
 Arancione: 605.0 nm
-Rosso: 667.8 nm, 706.5 nm
+Rosso: 667.8 nm,
 Verde: 501.6 nm (meno intensa)
 
 RMSE Elio:  2.49977498987409e-08
