@@ -13,6 +13,10 @@ verde/azzurro 1: 167 05, 239 45
 verde/azzurro 2: 167 02, 239 47
 verde/azzurro 3: 167 06, 239 43
 
+lunghezza tabulata verde=
+lunghezza tabulata gialla =
+t (compatibilità) = 3
+
 600
 zero: 202
 arancio (doppietto): 181 30, 223 10
