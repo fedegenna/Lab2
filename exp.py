@@ -1,5 +1,4 @@
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from astropy.coordinates import Angle
@@ -28,13 +27,13 @@ def func_mod(lambd,A,B):
     return A + B/pow(float(lambd),2)
 
 def main():
-    Theta_iniz = sessagesimale_to_decimale(203, 15)
+    Theta_iniz = sessagesimale_to_decimale(199, 30)
     Theta_iniz_err = sessagesimale_to_decimale(0,1)
     alpha = sessagesimale_to_decimale(59, 30)
     alpha_err = sessagesimale_to_decimale(0,1)
-    lambdas = [407, 440, 434, 546, 615] #ossia viola,indaco (azzurro),blu,verde,arancione su cui poniamo errore nullo
+    lambdas = [407, 434, 480, 546, 615] #ossia viola,indaco (azzurro),blu,verde,arancione su cui poniamo errore nullo
     
-    delta_prima_misura = [sessagesimale_to_decimale(151,33),sessagesimale_to_decimale(153,30),sessagesimale_to_decimale(152,20),sessagesimale_to_decimale(146,30),sessagesimale_to_decimale(154,30)]
+    delta_prima_misura = [sessagesimale_to_decimale(156, 30),sessagesimale_to_decimale(157,13),sessagesimale_to_decimale(158,30),sessagesimale_to_decimale(159,0),sessagesimale_to_decimale(159,30)]
     #delta_prima_misura_err = [
     delta_min = []
     for i in range(5):
