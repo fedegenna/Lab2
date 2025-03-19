@@ -3,7 +3,9 @@
 1200 fenditure
 zero: 203 08
 angolo doppietto del sodio
-arancio: 159 10, 248 16
+arancio 1: 159 10, 248 16
+arancio 2: 159 06, 248 18
+arancio 3: 159 11, 248 14
 gallo: 161, 246 10
 verde/azzuro: 167 05, 239 45
 
