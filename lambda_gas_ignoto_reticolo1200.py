@@ -13,6 +13,14 @@ def angoli_rad (gradi, primi):
     angolo_in_radianti = np.deg2rad(angolo_in_gradi)
     return angolo_in_radianti
 
+def stampa_gradi_primi(radianti):
+    gradi_decimali = np.rad2deg(radianti)
+    gradi = int(gradi_decimali)
+    primi_decimali = (gradi_decimali - gradi) * 60
+    primi = int(primi_decimali)
+    secondi = round((primi_decimali - primi) * 60)
+    print(f"{gradi} gradi, {primi} primi, {secondi} secondi")
+
 def compatibilita (x, y, dx, dy):
     return abs(x - y) / np.sqrt(dx**2 + dy**2)
 
@@ -59,6 +67,24 @@ def main ():
     d_theta_g = theta_stats_g.sigma_mean()
     d_theta_a = theta_stats_a.sigma_mean()
     d_theta_r = theta_stats_r.sigma_mean()
+
+    print("Theta verde medio: ", end="")
+    stampa_gradi_primi(theta_v)
+    print("Theta giallo medio: ", end="")
+    stampa_gradi_primi(theta_g)
+    print("Theta arancione medio: ", end="")
+    stampa_gradi_primi(theta_a)
+    print("Theta rosso medio: ", end="")
+    stampa_gradi_primi(theta_r)
+
+    print("Errore theta verde: ", end="")
+    stampa_gradi_primi(d_theta_v)
+    print("Errore theta giallo: ", end="")
+    stampa_gradi_primi(d_theta_g)
+    print("Errore theta arancione: ", end="")
+    stampa_gradi_primi(d_theta_a)
+    print("Errore theta rosso: ", end="")
+    stampa_gradi_primi(d_theta_r)
 
     lunghezza_v = lunghezza(n, passo, theta_v)
     lunghezza_g = lunghezza(n, passo, theta_g)
