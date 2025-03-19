@@ -17,3 +17,9 @@ azzurro : 158 30
 verde : 159
 arancione : 159 30
 
+misure inventate:
+viola: 156 29, 156 31, 156 26
+blu: 157 17, 157 15, 157 16
+azzurro: 158 28, 158 30, 158 30
+verde: 159 06, 159 00, 159 07
+arancione: 159 35, 159 32, 159 35
