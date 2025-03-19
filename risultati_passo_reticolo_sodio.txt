@@ -6,3 +6,9 @@ Passo arancione:  8.766535288483002e-07 m
 Errore passo arancione:  4.1388958933211947e-10 m
 Passo giallo:  8.704495855790331e-07 m
 Errore passo giallo:  4.389049429711431e-10 m
+
+RISULTATI UFFICIALI
+risultato passo ottenuto con doppietto del sodio per reticolo da 1200:
+
+Passo del reticolo da 1200:  8.398953064955466e-07 m
+Errore passo:  5.390244084675998e-10 m
