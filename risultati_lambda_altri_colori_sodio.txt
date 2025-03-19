@@ -1,0 +1,4 @@
+Lunghezza verde:  4.976911922698949e-07 m
+Lunghezza gialla:  5.682682961335574e-07 m
+Sigma verde:  8.604403865052562e-09 m
+Sigma gialla:  2.658519332212754e-10 m
