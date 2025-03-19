@@ -24,3 +24,9 @@ Neon (Ne)
 Rosso (~640-650 nm) → Il valore misurato di 640.9 nm è compatibile con alcune righe del neon.
 Arancione (585.2 nm - 603 nm) → Il valore giallo-arancione rientra nelle righe spettrali del neon.
 Verde (540-550 nm, molto debole) → Il tuo valore di 541.8 nm potrebbe corrispondere a una riga secondaria del neon.
+
+compatibilità gas e elio:
+Compatibilità verde:  103.00000000000006
+Compatibilità arancione:  10.625000000000004
+Compatibilità rosso:  53.80000000000002
+Compatibilità giallo:  4.999999999999952
