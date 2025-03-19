@@ -1,6 +1,21 @@
 zero: 203 10
 angoli:
-rosso acceso (potrebbe essere sbagliato l'ordine forse n = 3): 154 07, 253 30
-arancione (quasi rosso) : 158 20, 248 45
-giallo : 159 30, 247 45
-verde (forse terzo ordine) : 163 10, 243 30
+rosso acceso (potrebbe essere sbagliato l'ordine forse n = 3):
+1) 154 07, 253 30
+2) 154 09, 253 36
+3) 153 58, 253 34
+
+arancione (quasi rosso) : 
+1) 158 20, 248 45
+2) 158 15, 249 02
+3) 158 24, 248 43
+
+giallo :
+1) 159 30, 247 45
+2) 159 32, 248
+3) 159 27, 247 40
+
+verde (forse terzo ordine) : 
+1) 163 10, 243 30
+2) 163 06, 243 33
+3) 163 11, 243 27
