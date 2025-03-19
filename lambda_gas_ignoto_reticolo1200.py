@@ -58,7 +58,10 @@ def main ():
     print ("Errore lunghezza verde: ", d_lunghezza_v, "m")
     print ("Lunghezza arancione: ", lunghezza_a, "m")
     print ("Errore lunghezza arancione: ", d_lunghezza_a, "m")
-    
+    print ("Lunghezza rossa: ", lunghezza_r, "m")
+    print ("Errore lunghezza rossa: ", d_lunghezza_r, "m")
+    print ("Lunghezza giallo: ", lunghezza_g, "m")
+    print ("Errore lunghezza giallo: ", d_lunghezza_g, "m")
     
 if __name__ == "__main__":
     main()
