@@ -34,7 +34,7 @@ def compatibilita (x, y, dx, dy):
 
 def main ():
     n = 1
-    passi = [8.15 * 10**(-7) , 8.09 * 10**(-7)]
+    passi = [8.41 * 10**(-7) , 8.77 * 10**(-7), 8.70 * 10**(-7) ]
     passi_stats = stats(passi)
     passo = passi_stats.mean()
     d_passo = passi_stats.sigma_mean()
