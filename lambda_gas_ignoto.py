@@ -39,15 +39,21 @@ def main ():
     passo = passi_stats.mean()
     d_passo = passi_stats.sigma_mean()
 
-    theta_v = 0.5 * (angoli_rad(168-85, 6))
-    theta_a = 0.5 * (angoli_rad(171-82, 30-5))
-    
+    theta_v = 0.5 * (angoli_rad(243-163, 30-10))
+    theta_g = 0.5 * (angoli_rad(247-159, 45-30))
+    theta_r = 0.5 * (angoli_rad(253-154, 30-7))
+    theta_a = 0.5 * (angoli_rad(248-158, 45-20))
+
     lunghezza_v = lunghezza(n, passo, theta_v)
     lunghezza_a = lunghezza(n, passo, theta_a)
+    lunghezza_r= lunghezza(n, passo, theta_r)
+    lunghezza_g = lunghezza(n, passo, theta_g)
     
     d_lunghezza_v = errore_lunghezza(n, passo, theta_v, d_passo, 0.5 * angoli_rad(1, 0))
     d_lunghezza_a = errore_lunghezza(n, passo, theta_a, d_passo, 0.5 * angoli_rad(1, 0))
-    
+    d_lunghezza_r = errore_lunghezza(n, passo, theta_r, d_passo, 0.5 * angoli_rad(1, 0))
+    d_lunghezza_g = errore_lunghezza(n, passo, theta_g, d_passo, 0.5 * angoli_rad(1, 0))
+
     print ("Lunghezza verde: ", lunghezza_v, "m")
     print ("Errore lunghezza verde: ", d_lunghezza_v, "m")
     print ("Lunghezza arancione: ", lunghezza_a, "m")
