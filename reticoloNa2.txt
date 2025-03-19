@@ -6,8 +6,12 @@ angolo doppietto del sodio
 arancio 1: 159 10, 248 16
 arancio 2: 159 06, 248 18
 arancio 3: 159 11, 248 14
-gallo: 161, 246 10
-verde/azzuro: 167 05, 239 45
+giallo 1: 161, 246 10
+giallo 2: 161 04, 246 07
+giallo 3: 160 57, 246 12
+verde/azzurro 1: 167 05, 239 45
+verde/azzurro 2: 167 02, 239 47
+verde/azzurro 3: 167 06, 239 43
 
 600
 zero: 202
