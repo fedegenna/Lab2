@@ -95,7 +95,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     f"p-value = {p_value:.4f}"
     )
     ax.text(
-    0.05, 0.95, textstr, transform=ax.transAxes, fontsize=10,
+    0.05, 0.25, textstr, transform=ax.transAxes, fontsize=10,
     verticalalignment='top', bbox=dict(boxstyle='round', facecolor='white', alpha=0.5)
     )
 
