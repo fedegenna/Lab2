@@ -29,9 +29,9 @@ verde: 182 30, 222 20
 
 300
 zero: 202 10
-arancio primo ordine 1(vedo una linea sola, non doppietto): 192 05
-arancio primo ordine 2 : 192 07
-arancio primo ordine 3 : 192 04
+arancio primo ordine 1(vedo una linea sola, non doppietto): 192 05, 212 15
+arancio primo ordine 2 : 192 07, 212 13
+arancio primo ordine 3 : 192 04, 212 16
 arancio secondo ordine 1: 181 10
 arancio secondo ordine 2 : 181 11
 arancio secondo ordine 3 : 181 08
