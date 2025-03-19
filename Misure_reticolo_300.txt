@@ -1,0 +1,28 @@
+300
+zero: 202 10
+arancio primo ordine 1(vedo una linea sola, non doppietto): 192 05
+arancio primo ordine 2 : 192 10
+arancio primo ordine 3 : 192
+arancio secondo ordine 1: 181 10
+arancio secondo ordine 2 : 181 16
+arancio secondo ordine 3 : 181 04
+giallo primo ordine 1: 192 04
+giallo primo ordine 2: 192 16
+giallo primo ordine 3: 192 10
+giallo secondo ordine 1 : 182 03
+giallo secondo ordine 2 : 181 58
+giallo secondo ordine 3 : 182 08
+azzurro primo ordine 1 : 193 30
+azzurro primo ordine 2 : 193 36
+azzurro primo ordine 3 : 193 24
+azzurro secondo ordine 1 : 184 36
+azzurro secondo ordine 2 : 184 26
+azzurro secondo ordine 3 : 184 31
+rosso primo ordine 1 : 191 33
+rosso primo ordine 2 : 191 38
+rosso primo ordine 3 : 191 28
+rosso secondo ordine 1 : 180 04
+rosso secondo ordine 2 : 180 10
+rosso secondo ordine 3 : 180 16
+
+rosso, arancione, giallo, azzurro
