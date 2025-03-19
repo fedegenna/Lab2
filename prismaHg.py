@@ -101,7 +101,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
 
     x = np.linspace(400,620,100)
     y = func_mod(x,m.values['A'],m.values['B'])
-    ax.plot(x,y,label='Interpolazione')
+    ax.plot(x,y,label='Interpolazione',color='red',linestyle='--') 
     plt.legend()
     plt.show()
     
