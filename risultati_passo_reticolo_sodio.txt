@@ -1,0 +1,8 @@
+reticolo sodio 1200
+
+Passo verde:  8.405319371019053e-07 m
+Errore passo verde:  5.264522775386565e-10 m
+Passo arancione:  8.766535288483002e-07 m
+Errore passo arancione:  4.1388958933211947e-10 m
+Passo giallo:  8.704495855790331e-07 m
+Errore passo giallo:  4.389049429711431e-10 m
