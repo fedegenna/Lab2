@@ -13,6 +13,7 @@ verde/azzurro 1: 167 05, 239 45
 verde/azzurro 2: 167 02, 239 47
 verde/azzurro 3: 167 06, 239 43
 
+lunghezza tabulata doppietto sodio : 589 nm, 589.6 nm
 lunghezza tabulata verde=
 lunghezza tabulata gialla =
 t (compatibilità) = 3
