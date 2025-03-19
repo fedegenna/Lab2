@@ -34,9 +34,9 @@ def main ():
     lambda_doppietto = lambda_doppietto_stats.mean()
     d_lambda = lambda_doppietto_stats.sigma_mean()
     
-    theta_1 = 0.5 * (angoli_rad(223-181, 10-30))
-    theta_2 = 0.5 * (angoli_rad(223-181, 15-28))
-    theta_3 = 0.5 * (angoli_rad(223-181, 8-37))
+    theta_1 = 0.5 * (angoli_rad(202-192, 10-5))
+    theta_2 = 0.5 * (angoli_rad(202-192, 10-10))
+    theta_3 = 0.5 * (angoli_rad(202-192, 10))
     
     thetas = [theta_1, theta_2, theta_3]
     theta_stats = stats(thetas)
