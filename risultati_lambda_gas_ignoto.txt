@@ -1,5 +1,4 @@
 
-compatibile con il Neon
 
 Lunghezza verde:  5.418399477833473e-07 m
 Lunghezza gialla:  5.85081717891903e-07 m
@@ -9,3 +8,19 @@ Errore lunghezza verde:  4.405352248409587e-10 m
 Errore lunghezza gialla:  5.395896657343334e-10 m
 Errore lunghezza arancione:  8.135520241910633e-10 m
 Errore lunghezza rossa:  4.875335649978479e-10 m
+
+COMPATIBILE CON L'ELIO
+
+confronto elio e neon:
+Elio (He)
+
+Giallo (587.6 nm) → Molto vicino al valore misurato.
+Arancione (605 nm, meno intenso) → Il tuo valore di 596.5 nm è vicino.
+Rosso (667.8 nm e 706.5 nm) → Il tuo valore di 640.9 nm è un po' distante, ma potrebbe rientrare negli errori di misura.
+Verde (501.6 nm) → Il tuo valore di 541.8 nm è un po' più alto, ma alcuni strumenti potrebbero registrarlo con un piccolo scostamento.
+
+Neon (Ne)
+
+Rosso (~640-650 nm) → Il valore misurato di 640.9 nm è compatibile con alcune righe del neon.
+Arancione (585.2 nm - 603 nm) → Il valore giallo-arancione rientra nelle righe spettrali del neon.
+Verde (540-550 nm, molto debole) → Il tuo valore di 541.8 nm potrebbe corrispondere a una riga secondaria del neon.
