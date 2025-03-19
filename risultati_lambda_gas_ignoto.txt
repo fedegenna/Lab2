@@ -1,10 +1,11 @@
-Lunghezza verde:  5.564314044532282e-07 m
-Errore lunghezza verde:  9.144451512696176e-09 m
-Lunghezza arancione:  6.122114258772164e-07 m
-Errore lunghezza arancione:  9.449578410932935e-09 m
-Lunghezza rossa:  6.578473862204181e-07 m
-Errore lunghezza rossa:  9.71283207889916e-09 m
-Lunghezza giallo:  6.006110248174117e-07 m
-Errore lunghezza giallo:  9.384562754047853e-09 m
 
 compatibile con il Neon
+
+Lunghezza verde:  5.418399477833473e-07 m
+Lunghezza gialla:  5.85081717891903e-07 m
+Lunghezza arancione:  5.965133634133147e-07 m
+Lunghezza rossa:  6.40933699932863e-07 m
+Errore lunghezza verde:  4.405352248409587e-10 m
+Errore lunghezza gialla:  5.395896657343334e-10 m
+Errore lunghezza arancione:  8.135520241910633e-10 m
+Errore lunghezza rossa:  4.875335649978479e-10 m
