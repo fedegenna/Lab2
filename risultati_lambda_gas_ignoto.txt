@@ -6,3 +6,5 @@ Lunghezza rossa:  6.578473862204181e-07 m
 Errore lunghezza rossa:  9.71283207889916e-09 m
 Lunghezza giallo:  6.006110248174117e-07 m
 Errore lunghezza giallo:  9.384562754047853e-09 m
+
+compatibile con il Neon
