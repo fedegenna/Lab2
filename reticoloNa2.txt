@@ -20,7 +20,10 @@ t (compatibilità) = 2
 
 600
 zero: 202
-arancio (doppietto): 181 30, 223 10
+arancio (doppietto): 
+1) 181 30, 223 10
+2) 181 28, 223 15
+3) 181 37, 223 08
 rosso: 180 30, 224
 verde: 182 30, 222 20
 
