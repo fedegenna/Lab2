@@ -20,18 +20,25 @@ def coeff_rifrazione(delta_min,alpha):
     return np.sin(grad_to_rad((delta_min+alpha)/2))/np.sin(grad_to_rad(alpha/2))
 
 
-def error_coeff_rifrazione(delta_min,delta_min_err,alpha,alpha_err):
-    return np.sqrt(np.cos(grad_to_rad((delta_min+alpha)/2))/(2*np.sin(grad_to_rad(alpha/2))*np.sin(grad_to_rad((delta_min+alpha)/2)))*delta_min_err)**2+(np.cos(grad_to_rad((delta_min+alpha)/2))/(2*np.sin(grad_to_rad(alpha/2))*np.sin(grad_to_rad((delta_min+alpha)/2)))*alpha_err)**2
+def error_coeff_rifrazione(delta_min, delta_min_err, alpha, alpha_err):
+    term1 = (np.cos(grad_to_rad((delta_min + alpha) / 2)) / (2 * np.sin(grad_to_rad(alpha / 2)))) * delta_min_err
+    term2 = ((np.cos(grad_to_rad((delta_min + alpha) / 2)) / (2 * np.sin(grad_to_rad(alpha / 2)))) - 
+             (np.sin(grad_to_rad((delta_min + alpha) / 2)) * np.cos(grad_to_rad(alpha / 2)) / 
+              (2 * np.sin(grad_to_rad(alpha / 2))**2))) * alpha_err
+    return np.sqrt(term1**2 + term2**2)
+def func_mod1(lenght,A,B):
+    return A + B/(pow(lenght,2))
 
-def func_mod(lenght,A,B):
-    return A + B/pow(lenght,2)
+'''def funcmod2(lenght,A,B,C):
+    return A + B/(pow(lenght,2)) + C/(pow(lenght,4))'''
 
 def main(): #programma che quantifica la relazione tra linghezza d'onda ed indice di rifrazione, intepolando per ottenere i coefficenti di Cauchy
     #angoli iniziali:
-    Theta_iniz = sessagesimale_to_decimale(199, 34)
+    Theta_iniz = sessagesimale_to_decimale(199,34)
     Theta_iniz_err = sessagesimale_to_decimale(0,1)
-    alpha = sessagesimale_to_decimale(59, 30)
-    alpha_err = sessagesimale_to_decimale(0,1)
+    alpha = sessagesimale_to_decimale(59,30)
+    alpha_err =  sessagesimale_to_decimale(0,1)
+    
     lambdas = [407, 434, 480, 546, 615] #ossia viola,blu,azzurro,verde,arancione su cui poniamo errore nullo
     
     #prime misure degli angoli per ogni colore(3) e statistiche:
@@ -47,7 +54,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     media_arancione = np.mean(delta_arancione)
     delta_prima_misura = [media_viola,media_blu,media_azzurro,media_verde,media_arancione]
     delta_prima_misura_err = [np.std(delta_viola)/np.sqrt(3),np.std(delta_blu)/np.sqrt(3),np.std(delta_azzurro)/np.sqrt(3),np.std(delta_verde)/np.sqrt(3),np.std(delta_arancione)/np.sqrt(3)]
-    
+    print(delta_prima_misura_err)
     #misura dell'angolo rispetto a theta iniziale:
     
     delta_min = []
@@ -67,16 +74,16 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
         n_rifraz_err.append(error_coeff_rifrazione(delta_min[i],delta_min_err[i],alpha,alpha_err))
     fig,ax = plt.subplots()
     ax.errorbar(lambdas,n_rifraz,yerr=n_rifraz_err,fmt='o',label='Dati sperimentali')
-    
+    print(n_rifraz_err)
     plt.xlabel('Lunghezza d\'onda [nm]')
     plt.ylabel('Indice di rifrazione')
     plt.title('Indice di rifrazione in funzione della lunghezza d\'onda')
     plt.legend()
-    
+    print(n_rifraz)
     
     #interpolazione per ottenere i coefficenti di Cauchy:
-    my_cost_func = LeastSquares(lambdas, n_rifraz, n_rifraz_err, func_mod)
-    m = Minuit(my_cost_func, A=1, B=0.001 ) 
+    my_cost_func = LeastSquares(lambdas, n_rifraz, n_rifraz_err, func_mod1)
+    m = Minuit(my_cost_func, A=1, B=1000 ) 
     m.migrad()
     A = m.values['A']
     B = m.values['B']
@@ -100,10 +107,46 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     )
 
     x = np.linspace(400,620,100)
-    y = func_mod(x,m.values['A'],m.values['B'])
+    y = func_mod1(x,m.values['A'],m.values['B'])
     ax.plot(x,y,label='Interpolazione',color='red',linestyle='--') 
     plt.legend()
     plt.show()
+    
+    
+    '''#seconda interpolazione: proviamo ad aumentare l'ordine di arresto per vedere se migliora il fit;
+    my_cost_func2 = LeastSquares(lambdas, n_rifraz, n_rifraz_err, funcmod2)
+    m2 = Minuit(my_cost_func2, A=1, B=1000, C=1)
+    m2.migrad()
+    A2 = m2.values['A']
+    B2 = m2.values['B']
+    C2 = m2.values['C']
+    chi_squared2 = m2.fval
+    p_value2 = 1 - chi2.cdf(chi_squared2,2)
+    print(m2.values)
+    print(m2.errors)
+    print(m2.covariance)
+    fig,ax = plt.subplots()
+    ax.errorbar(lambdas,n_rifraz,yerr=n_rifraz_err,fmt='o',label='Dati sperimentali')
+    textstr = (
+    f"A = {m2.values['A']:.4f} ± {m2.errors['A']:.4f}\n"
+    f"B = {m2.values['B']:.4f} ± {m2.errors['B']:.4f}\n"
+    f"C = {m2.values['C']:.4f} ± {m2.errors['C']:.4f}\n"
+    f"Chi² = {chi_squared2:.2f}\n"
+    f"p-value = {p_value2:.4f}"
+    )
+    ax.text(
+    0.05, 0.25, textstr, transform=ax.transAxes, fontsize=10,
+    verticalalignment='top', bbox=dict(boxstyle='round', facecolor='white', alpha=0.5)
+    )
+    x = np.linspace(400,620,100)
+    y = funcmod2(x,m2.values['A'],m2.values['B'],m2.values['C'])
+    ax.plot(x,y,label='Interpolazione',color='red',linestyle='--')
+    plt.legend()
+    plt.xlabel('Lunghezza d\'onda [nm]')
+    plt.ylabel('Indice di rifrazione')
+    plt.title('Indice di rifrazione in funzione della lunghezza d\'onda')
+    plt.show()'''
+    
     
     
     

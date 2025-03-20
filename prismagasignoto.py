@@ -30,13 +30,13 @@ def error_cauchy(n,n_err,a,a_err,b,b_err):
     return np.sqrt((b_err/(2*n*np.sqrt(b/n-a)))**2+(a_err/(2*n*np.sqrt(b/n-a)))**2+(n_err*(b/n-a)**(-1.5)/2)**2)
 
 def main():
-    theta_iniz = sessagesimale_to_decimale(202, 40)
+    theta_iniz = sessagesimale_to_decimale(199, 34)
     theta_iniz_err = sessagesimale_to_decimale(0,1)
     alpha = sessagesimale_to_decimale(59, 30)
     alpha_err = sessagesimale_to_decimale(0,1)
-    A = 1.5093
+    A = 1.5095489178656827
     
-    err_A = 0.0329
+    err_A = 0.032850778532200045
     
     B = 10179.559254361111
     
@@ -44,7 +44,7 @@ def main():
     
     #analisi rosso:
     
-    delta_misurati_rosso = [sessagesimale_to_decimale(155,10),sessagesimale_to_decimale(155,7),sessagesimale_to_decimale(155,9)]
+    delta_misurati_rosso = [sessagesimale_to_decimale(159,54),sessagesimale_to_decimale(159,53),sessagesimale_to_decimale(159,56)]
     delta_min_rosso = abs(np.mean(delta_misurati_rosso)-theta_iniz)
     delta_rosso_err = np.std(delta_misurati_rosso)/np.sqrt(len(delta_misurati_rosso))
     def error_delta_min(delta_prima_misura_err,Theta_iniz_err):
@@ -58,7 +58,7 @@ def main():
     
     #analisi giallo:
     
-    delta_misurati_giallo = [sessagesimale_to_decimale(154,30),sessagesimale_to_decimale(154,32),sessagesimale_to_decimale(154,30)]
+    delta_misurati_giallo = [sessagesimale_to_decimale(159,28),sessagesimale_to_decimale(159,30),sessagesimale_to_decimale(159,33)]
     delta_min_giallo = abs(np.mean(delta_misurati_giallo)-theta_iniz)
     delta_giallo_err = np.std(delta_misurati_giallo)/np.sqrt(len(delta_misurati_giallo))
     delta_min_giallo_err = error_delta_min(delta_giallo_err,theta_iniz_err)
@@ -70,7 +70,7 @@ def main():
     
     #analisi verde:
     
-    delta_misurati_verde = [sessagesimale_to_decimale(154,0),sessagesimale_to_decimale(154,2),sessagesimale_to_decimale(153,59)]
+    delta_misurati_verde = [sessagesimale_to_decimale(159,2),sessagesimale_to_decimale(159,5),sessagesimale_to_decimale(159,5)]
     delta_min_verde = abs(np.mean(delta_misurati_verde)-theta_iniz)
     delta_verde_err = np.std(delta_misurati_verde)/np.sqrt(len(delta_misurati_verde))
     delta_min_verde_err = error_delta_min(delta_verde_err,theta_iniz_err)
@@ -82,7 +82,7 @@ def main():
     
     #analisi azzurro:
     
-    delta_misurati_azzurro = [sessagesimale_to_decimale(153,30),sessagesimale_to_decimale(153,36),sessagesimale_to_decimale(153,29)]
+    delta_misurati_azzurro = [sessagesimale_to_decimale(158,12),sessagesimale_to_decimale(158,13),sessagesimale_to_decimale(158,17)]
     delta_min_azzurro = abs(np.mean(delta_misurati_azzurro)-theta_iniz)
     delta_azzurro_err = np.std(delta_misurati_azzurro)/np.sqrt(len(delta_misurati_azzurro))
     delta_min_azzurro_err = error_delta_min(delta_azzurro_err,theta_iniz_err)
@@ -94,7 +94,7 @@ def main():
     
     #analisi viola:
     
-    delta_misurati_viola = [sessagesimale_to_decimale(153,3),sessagesimale_to_decimale(153,1),sessagesimale_to_decimale(153,2)]
+    delta_misurati_viola = [sessagesimale_to_decimale(157,23),sessagesimale_to_decimale(157,29),sessagesimale_to_decimale(157,26)]
     delta_min_viola = abs(np.mean(delta_misurati_viola)-theta_iniz)
     delta_viola_err = np.std(delta_misurati_viola)/np.sqrt(len(delta_misurati_viola))
     delta_min_viola_err = error_delta_min(delta_viola_err,theta_iniz_err)
