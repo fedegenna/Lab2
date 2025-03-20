@@ -7,6 +7,6 @@ verde: 154, 154 02 153 59
 azzurro 153 30, 153 36, 153 29
 viola: 153 03, 153 01, 153 02
 
-misure inventate:
-rosso: 640.6
+lunghezze d'onda inventate:
+rosso: 640.6 nm
 
