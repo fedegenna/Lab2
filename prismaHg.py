@@ -72,14 +72,15 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     n_rifraz_err = []
     for i in range(5):
         n_rifraz_err.append(error_coeff_rifrazione(delta_min[i],delta_min_err[i],alpha,alpha_err))
+    print(n_rifraz),print(n_rifraz_err)
     fig,ax = plt.subplots()
     ax.errorbar(lambdas,n_rifraz,yerr=n_rifraz_err,fmt='o',label='Dati sperimentali')
-    print(n_rifraz_err)
+    
     plt.xlabel('Lunghezza d\'onda [nm]')
     plt.ylabel('Indice di rifrazione')
     plt.title('Indice di rifrazione in funzione della lunghezza d\'onda')
     plt.legend()
-    print(n_rifraz)
+    
     
     #interpolazione per ottenere i coefficenti di Cauchy:
     my_cost_func = LeastSquares(lambdas, n_rifraz, n_rifraz_err, func_mod1)
