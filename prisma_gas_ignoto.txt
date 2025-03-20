@@ -8,5 +8,9 @@ azzurro 153 30, 153 36, 153 29
 viola: 153 03, 153 01, 153 02
 
 lunghezze d'onda inventate:
-rosso: 640.6 nm
+rosso: 640.6
+giallo: 585.1 
+verde: 541
+azzurro: 480
+viola: 437.6
 
