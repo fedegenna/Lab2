@@ -14,3 +14,10 @@ verde: 541
 azzurro: 480
 viola: 437.6
 
+angoli inventati:
+rosso: 159 57, 159 53, 159 56
+giallo: 159 31, 159 30, 159 33
+verde: 159 4, 159 5, 159 5
+azzurro: 158 14, 158 13, 158 17
+viola : 157 26, 157 29, 157 26
+
