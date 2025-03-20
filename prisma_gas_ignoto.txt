@@ -7,3 +7,21 @@ verde: 154, 154 02 153 59
 azzurro 153 30, 153 36, 153 29
 viola: 153 03, 153 01, 153 02
 
+lunghezze d'onda inventate:
+rosso: 640.6
+giallo: 585.1 
+verde: 541
+azzurro: 480
+viola: 437.6
+
+angoli inventati:
+rosso: 159 57, 159 53, 159 56
+giallo: 159 31, 159 30, 159 33
+verde: 159 4, 159 5, 159 5
+azzurro: 158 14, 158 13, 158 17
+viola : 157 26, 157 29, 157 26
+
+A = 1.5095489178656827
+err A = 0.03191319153252594
+B = 10149.74205023
+err B = 7007.09267867

@@ -1,0 +1,16 @@
+Lunghezza azzurra primo ordine:  1.0117443154387969e-06 m
+Lunghezza arancione primo ordine:  1.1741484939576486e-06 m
+Lunghezza rossa primo ordine:  1.2362320624357715e-06 m
+Lunghezza gialla primo ordine:  1.1645385310878106e-06 m
+Sigma azzurra primo ordine:  2.484221577193984e-07 m
+Sigma arancione primo ordine  2.924242469788243e-07 m
+Sigma rossa primo ordine:  3.104160312178858e-07 m
+Sigma gialla primo ordine:  2.978692655439053e-07 m
+Lunghezza azzurra secondo ordine:  2.0351026609420604e-06 m
+Lunghezza arancione secondo ordine:  2.4052563362038225e-06 m
+Lunghezza rossa secondo ordine:  2.514213474326045e-06 m
+Lunghezza gialla secondo ordine:  2.3077894334776227e-06 m
+Sigma azzurra secondo ordine:  7.601013304710302e-07 m
+Sigma arancione secondo ordine  9.079781681019112e-07 m
+Sigma rossa secondo ordine:  9.494067371630224e-07 m
+Sigma gialla secondo ordine:  8.694947167388114e-07 m

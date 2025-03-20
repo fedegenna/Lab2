@@ -16,6 +16,7 @@ verde/azzurro 3: 167 06, 239 43
 lunghezza tabulata doppietto sodio : 589 nm, 589.6 nm
 lunghezza tabulata verde/azzurro=  514.9 nm
 lunghezza tabulata gialla =  568.8 nm
+lunghezza_tabulata_r= 615.4 * 10**(-9)
 t (compatibilità) = 2
 
 600
