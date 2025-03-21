@@ -10,6 +10,11 @@ def sessagesimale_to_decimale(gradi, primi):
     angolo = Angle(f'{gradi}d{primi}m')
     # Converte l'angolo in gradi decimali
     return angolo.deg
+def decimale_to_sessagesimale(angolo):
+    # Crea un oggetto Angle utilizzando i gradi decimali
+    angolo = Angle(angolo, unit='deg')
+    # Converte l'angolo in gradi e primi
+    return angolo.dms
 
 
 def grad_to_rad(angolo):
@@ -29,8 +34,8 @@ def error_coeff_rifrazione(delta_min, delta_min_err, alpha, alpha_err):
 def func_mod1(lenght,A,B):
     return A + B/(pow(lenght,2))
 
-'''def funcmod2(lenght,A,B,C):
-    return A + B/(pow(lenght,2)) + C/(pow(lenght,4))'''
+def funcmod2(lenght,A,B,C):
+    return A + B/(pow(lenght,2)) + C/(pow(lenght,4))
 
 def main(): #programma che quantifica la relazione tra linghezza d'onda ed indice di rifrazione, intepolando per ottenere i coefficenti di Cauchy
     #angoli iniziali:
@@ -54,12 +59,28 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     media_arancione = np.mean(delta_arancione)
     delta_prima_misura = [media_viola,media_blu,media_azzurro,media_verde,media_arancione]
     delta_prima_misura_err = [np.std(delta_viola)/np.sqrt(3),np.std(delta_blu)/np.sqrt(3),np.std(delta_azzurro)/np.sqrt(3),np.std(delta_verde)/np.sqrt(3),np.std(delta_arancione)/np.sqrt(3)]
-    print(delta_prima_misura_err)
+    
     #misura dell'angolo rispetto a theta iniziale:
     
     delta_min = []
     for i in range(5):
         delta_min.append(abs(delta_prima_misura[i]-Theta_iniz))
+    delta_sessagesimale_viola = []
+    delta_sessagesimale_azzurro = []
+    delta_sessagesimale_blu = []
+    delta_sessagesimale_verde = []
+    delta_sessagesimale_arancione = []
+    for i in range(3):
+        delta_sessagesimale_viola.append(decimale_to_sessagesimale(delta_viola[i]-Theta_iniz))
+        delta_sessagesimale_azzurro.append(decimale_to_sessagesimale(delta_azzurro[i]-Theta_iniz))
+        delta_sessagesimale_blu.append(decimale_to_sessagesimale(delta_blu[i]-Theta_iniz))
+        delta_sessagesimale_verde.append(decimale_to_sessagesimale(delta_verde[i]-Theta_iniz))
+        delta_sessagesimale_arancione.append(decimale_to_sessagesimale(delta_arancione[i]-Theta_iniz))
+    print('Delta viola:',delta_sessagesimale_viola)
+    print('Delta azzurro:',delta_sessagesimale_azzurro)
+    print('Delta blu:',delta_sessagesimale_blu)
+    print('Delta verde:',delta_sessagesimale_verde)
+    print('Delta arancione:',delta_sessagesimale_arancione)
     def error_delta_min(delta_prima_misura_err,Theta_iniz_err):
         return np.sqrt(delta_prima_misura_err**2+Theta_iniz_err**2)
     delta_min_err = []
@@ -69,10 +90,10 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     n_rifraz = []
     for i in range(5):
         n_rifraz.append(coeff_rifrazione(delta_min[i],alpha))
+    
     n_rifraz_err = []
     for i in range(5):
         n_rifraz_err.append(error_coeff_rifrazione(delta_min[i],delta_min_err[i],alpha,alpha_err))
-    print(n_rifraz),print(n_rifraz_err)
     fig,ax = plt.subplots()
     ax.errorbar(lambdas,n_rifraz,yerr=n_rifraz_err,fmt='o',label='Dati sperimentali')
     
@@ -111,10 +132,12 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     y = func_mod1(x,m.values['A'],m.values['B'])
     ax.plot(x,y,label='Interpolazione',color='red',linestyle='--') 
     plt.legend()
+    
+    plt.savefig('prismaHg.png')
     plt.show()
     
     
-    '''#seconda interpolazione: proviamo ad aumentare l'ordine di arresto per vedere se migliora il fit;
+    #seconda interpolazione: proviamo ad aumentare l'ordine di arresto per vedere se migliora il fit;
     my_cost_func2 = LeastSquares(lambdas, n_rifraz, n_rifraz_err, funcmod2)
     m2 = Minuit(my_cost_func2, A=1, B=1000, C=1)
     m2.migrad()
@@ -146,7 +169,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     plt.xlabel('Lunghezza d\'onda [nm]')
     plt.ylabel('Indice di rifrazione')
     plt.title('Indice di rifrazione in funzione della lunghezza d\'onda')
-    plt.show()'''
+    plt.show()
     
     
     
