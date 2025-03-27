@@ -1,0 +1,31 @@
+CALCOLO ANGOLO ALPHA:
+Angolo iniziale: (gradi,primi,secondi)
+122 15
+ANGOLO AL VERTICE:
+202 10 - 142 40 = 59 30 
+ANGOLI DI MINIMA DEVIAZIONE:
+
+ verde 85 10
+errore : 82 10 - 77 11
+
+arancione: 77 45
+errore :  78 - 77 05
+
+blu: 77 35
+errore :79 30 - 71 40
+
+viola : 74 11
+errore : 71 - 75 9
+
+rosso: 73 45
+errore: 72 45 -74 30
+
+lunghezze d'onda:
+verde 520-565, 542.5
+arancione 590-625, 607.5
+blu 435-500, 467.5
+viola 400-420, 410
+rosso 625-740, 682.5
+
+
+

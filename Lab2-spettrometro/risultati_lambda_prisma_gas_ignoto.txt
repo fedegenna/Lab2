@@ -1,0 +1,22 @@
+lambda rosso = 642.0065199543933 +- 28.45165343423592
+lambda giallo = 589.9412680080021 +- 28.40955253886858
+lambda verde = 545.3984430253466 +- 28.36377106317299
+lambda azzurro = 483.18805378595505 +- 28.278017793052516
+lambda viola = 440.2196205634191 +- 28.197119569920435
+
+lunghezze d'onda tabulate:
+
+Neon (Ne) - Lunghezze d'onda tabulate
+Giallo: 585.2 nm
+Rosso: 640.2 nm
+Verde: 540.1 nm (debole)
+azzurro: 479.2nm
+viola: 437.9nm
+
+
+Elio (He) - Lunghezze d'onda tabulate
+Giallo: 587.6 nm (una delle righe più intense)
+Rosso: 667.8 nm,
+Verde: 501.6 nm (meno intensa)
+azzurro: 492.19 nm
+viola: 447.15 nm

@@ -25,12 +25,10 @@ def coeff_rifrazione(delta_min,alpha):
     return np.sin(grad_to_rad((delta_min+alpha)/2))/np.sin(grad_to_rad(alpha/2))
 
 
-def error_coeff_rifrazione(delta_min, delta_min_err, alpha, alpha_err):
-    term1 = (np.cos(grad_to_rad((delta_min + alpha) / 2)) / (2 * np.sin(grad_to_rad(alpha / 2)))) * delta_min_err
-    term2 = ((np.cos(grad_to_rad((delta_min + alpha) / 2)) / (2 * np.sin(grad_to_rad(alpha / 2)))) - 
-             (np.sin(grad_to_rad((delta_min + alpha) / 2)) * np.cos(grad_to_rad(alpha / 2)) / 
-              (2 * np.sin(grad_to_rad(alpha / 2))**2))) * alpha_err
-    return np.sqrt(term1**2 + term2**2)
+def error_coeff_rifrazione(delta_min, delta_min_err, alpha):
+    return np.sqrt(pow(np.cos(grad_to_rad((delta_min+alpha)/2))/(2*np.sin(grad_to_rad(alpha/2))),2)*pow(delta_min_err,2))
+    
+    
 def func_mod1(lenght,A,B):
     return A + B/(pow(lenght,2))
 
@@ -42,7 +40,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     Theta_iniz = sessagesimale_to_decimale(199,34)
     Theta_iniz_err = sessagesimale_to_decimale(0,1)
     alpha = sessagesimale_to_decimale(59,30)
-    alpha_err =  sessagesimale_to_decimale(0,1)
+    
     
     lambdas = [407, 434, 480, 546, 615] #ossia viola,blu,azzurro,verde,arancione su cui poniamo errore nullo
     
@@ -93,7 +91,7 @@ def main(): #programma che quantifica la relazione tra linghezza d'onda ed indic
     
     n_rifraz_err = []
     for i in range(5):
-        n_rifraz_err.append(error_coeff_rifrazione(delta_min[i],delta_min_err[i],alpha,alpha_err))
+        n_rifraz_err.append(error_coeff_rifrazione(delta_min[i],delta_min_err[i],alpha))
     fig,ax = plt.subplots()
     ax.errorbar(lambdas,n_rifraz,yerr=n_rifraz_err,fmt='o',label='Dati sperimentali')
     
